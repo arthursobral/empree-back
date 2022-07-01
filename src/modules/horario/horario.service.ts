@@ -32,7 +32,7 @@ export class HorarioService{
         if (!usuarioDB) {
             throw new Error('Cliente não existe');
         }
-
+        
         const horarioDB = await prisma.horario.create({
             data: {
                 nome,
@@ -42,7 +42,7 @@ export class HorarioService{
                 duracao
             }
         })
-
+        
         return horarioDB;
     }
 

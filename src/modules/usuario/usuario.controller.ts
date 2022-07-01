@@ -33,7 +33,7 @@ export class UsuarioController {
     const { email, senha } = request.body;
 
     const usuarioService = new UsuarioService();
-
+    console.log("oi")
     const result = await usuarioService.signIn({
       email,
       senha,

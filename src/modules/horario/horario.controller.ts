@@ -8,12 +8,10 @@ export class HorarioController{
         if (!errors.isEmpty()) {
             return res.status(400).json({ errors: errors.array() });
         }
-
         let {nome, agendamento, desc, duracao } = req.body;
-
+        
         const horarioService = new HorarioService();
-
-
+        
         const result = await horarioService.create({
             nome,
             id_cliente: req.id_usuario.toString(),
